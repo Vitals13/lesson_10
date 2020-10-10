@@ -1,0 +1,355 @@
+/* Подключение шрифтов */
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-ExtraBold.woff2") format("woff2"), url("../fonts/Gilroy-ExtraBold.woff") format("woff");
+	font-weight: 800;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+/* Обнуляющий стиль */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+ol li,
+ul li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html,
+body {
+	height: 100%;
+	font-size: 14px;
+	line-height: 1;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+/* ------------------------------------------------------------------------------------------------- */
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+.input {
+	border-radius: 0px !important;
+	padding: 10px;
+	width: 100%;
+	box-shadow: 5px 5px 5px rgba(218, 63, 43, 0.938);
+	background-color: rgb(40, 204, 25);
+	color: #000;
+}
+.form__item {
+	margin: 0px 0px 30px 0px;
+}
+.form__label {
+	font-size: 30px;
+	font-style: italic;
+	margin: 0px 0px 20px 0px;
+}
+.option {
+}
+.option__item {
+	position: relative;
+	margin: 0px 0px 20px 0px;
+	padding: 0px 0px 0px 20px;
+}
+.option__input {
+	display: none;
+}
+.option__input:checked + .option__label::after {
+	display: block;
+}
+.option__label {
+	font-style: italic;
+	font-size: 20px;
+	font-weight: 900;
+}
+.option__label:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.option__label::before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	background-color: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+}
+.option__label::after {
+	display: none;
+	content: "";
+	width: 10px;
+	height: 10px;
+	background-color: rgb(226, 21, 6);
+	position: absolute;
+	top: 2.4px;
+	left: 2.4px;
+	border-radius: 50%;
+}
+.form__label {
+	display: inline-block;
+	margin: 0px 0px 5px 0px;
+}
+div.form__label {
+	display: block;
+}
+
+.smoke {
+}
+.smoke__item {
+	position: relative;
+	padding: 0px 0px 0px 20px;
+}
+.smoke__check {
+	display: none;
+}
+.smoke__label {
+	text-transform: uppercase;
+	font-size: 20px;
+}
+.smoke__label:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+.smoke__label::before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	background-color: rgba(218, 63, 43, 0.938);
+	position: absolute;
+	top: 3px;
+	left: 0;
+	border-radius: 50%;
+	box-shadow: 2px 2px 5px rgb(40, 204, 25);
+}
+.smoke__label::after {
+	content: "";
+	display: none;
+	width: 10px;
+	height: 10px;
+	background-color: rgb(40, 204, 25);
+	position: absolute;
+	top: 5.4px;
+	left: 2.4px;
+	border-radius: 50%;
+}
+.smoke__check:checked + .smoke__label::after {
+	display: block;
+}
+
+.status {
+}
+.status__title {
+	margin: 0px 0px 20px 0px;
+	font-size: 30px;
+	font-style: italic;
+}
+.status__item {
+	position: relative;
+	padding: 0px 0px 20px 20px;
+}
+.status__input {
+	display: none;
+}
+.status__label {
+	font-size: 20px;
+}
+.status__label:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+.status__label::before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	background-color: rgba(218, 63, 43, 0.938);
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	box-shadow: 2px 2px 5px rgb(40, 204, 25);
+}
+.status__label::after {
+	content: "";
+	display: none;
+	width: 10px;
+	height: 10px;
+	background-color: rgb(40, 204, 25);
+	position: absolute;
+	top: 2.6px;
+	left: 2.4px;
+	border-radius: 50%;
+}
+.status__input:checked + .status__label::after {
+	display: block;
+}
+
+
+
+.button {
+	height: 30px;
+	padding: 0px 20px;
+	background-color:rgb(40, 204, 25);
+	color: #fff;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px rgba(218, 63, 43, 0.938);
+	cursor: pointer;
+	margin: 0px 10px 0px 0px;
+}
+.button:hover{
+	background-color: #fff;
+	color: #000;
+}
+.button:active{
+	position: relative;
+	top: 5px;
+	box-shadow: 0 2px 0px rgba(218, 63, 43, 0.938);
+}
+.btn {
+	height: 20px;
+	padding: 0px 10px;
+	background-color: rgba(218, 63, 43, 0.938);
+	border-radius: 10px;
+	cursor: pointer;
+	box-shadow: 3px 3px 2px rgb(40, 204, 25);
+}
+
+.btn:hover{
+	background-color: #fff;
+}
+.btn:active{
+	position: relative;
+	top: 5px;
+	box-shadow: 0px 1px 0px rgb(40, 204, 25);
+}
+
+
+.select {
+	background-color: rgb(40, 204, 25);
+	font-size: 20px;
+	border-radius: 10px;
+	padding: 0px 20px;
+}
+
+.checkbox {
+}
+.checkbox__itams{
+	position: relative;
+	padding: 0px 0px 0px 20px;
+}
+
+.checkbox__item {
+	display: none;
+}
+.checkbox__item:checked + .checkbox__label::after{
+	display: block;
+}
+.checkbox__label {
+	font-size: 20px;
+	font-style: italic;
+}
+.checkbox__label:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.checkbox__label::before{
+	content: "";
+	width: 15px;
+	height: 15px;
+	background-color: rgba(218, 63, 43, 0.938);
+	position: absolute;
+	top: 2px;
+	left: 0;
+}
+
+.checkbox__label::after{
+	content: "";
+	display: none;
+	width: 10px;
+	height: 10px;
+	background-color: rgb(40, 204, 25);
+	position: absolute;
+	top: 5px;
+	left: 2.4px;
+}

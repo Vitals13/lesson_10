@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- &display=swap&subset=cyrillic-ext -->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,500&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Урок №10</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<form class="form" method="GET" enctype="multipart/form-data" action="#">
+			<div class="form__item">
+				<div class="form__label">Пол:</div>
+				<div class="option">
+					<div class="option__item">
+						<input checked class="option__input" type="radio" name="sex" id="radioMale" value="male">
+						<label class="option__label" for="radioMale">Мужчина</label>
+					</div>
+					<div class="option__item">
+						<input class="option__input" type="radio" name="sex" id="radioFemale" value="female">
+						<label class="option__label" for="radioFemale">Женский</label>
+					</div>
+				</div>
+			</div>
+			<div class="form__item">
+				<label class="form__label" for="username">Имя:</label>
+				<input class="input" placeholder="Введите имя" type="text" name="form[]" required id="username"
+					autocomplete="off">
+			</div>
+			<div class="form__item">
+				<label class="form__label" for="usermail">E-mail:</label>
+				<input class="input" placeholder=" Введите email:" type="text" name="form[]" required id="usermail"
+					autocomplete="off">
+			</div>
+			<div class="form__item">
+				<input class="input" placeholder=" Введите телефон" type="text" name="form[]" required id="tel"
+					autocomplete="off">
+			</div>
+			<div class="form__item">
+				<input class="input" placeholder=" Введите число" type="text" name="form[]" required id="number"
+					autocomplete="off">
+			</div>
+			<div class="form__item">
+				<input class="input" placeholder=" Введите пароль" type="text" name="form[]" required id="password"
+					autocomplete="off">
+			</div>
+			<div class="form__item">
+				<div class="smoke">
+					<div class="smoke__item">
+						<input class="smoke__check" value="1" type="checkbox" name="form[]" id="checkSmoke">
+						<label for="checkSmoke" class="smoke__label">Куришь?</label>
+					</div>
+				</div>
+			</div>
+			<div class="form__item">
+				<select name="form[]" class="select">
+					<option  value="1">Пункт №1</option>
+					<option value="2">Пункт №2</option>
+					<option value="3">Пункт №3</option>
+					<option value="4">Пункт №4</option>
+				</select>
+			</div>
+			<div class="form__item">
+				<div class="status">
+					<div class="status__title">Статус:</div>
+					<div class="status__item">
+						<input checked id="statusFree" name="status" value="free" class="status__input" type="radio">
+						<label class="status__label" for="statusFree">Свободен(на)</label>
+					</div>
+					<div class="status__item">
+						<input id="statusBusy" name="status" value="busy" class="status__input" type="radio">
+						<label class="status__label" for="statusBusy">Занят(а)</label>
+					</div>
+					<div class="status__item">
+						<input id="status123" name="status" value="123" class="status__input" type="radio">
+						<label class="status__label" for="status123">В отношениях</label>
+					</div>
+				</div>
+			</div>
+			<div class="form__item">
+				<div class="checkbox">
+					<div class="checkbox__itams">
+						<input id="checkCar" name="form[]" value="1" class="checkbox__item" type="checkbox">
+						<label class="checkbox__label" for="checkCar">Я согласен</label>
+					</div>
+				</div>
+			</div>
+			<div class="form__item">
+				<button class="button" autofocus type="submit"><span>Отправить</span></button>
+				<button class="btn" type="reset">Очистить</button>
+			</div>
+
+		</form>
+	</div>
+</body>
+
+</html>
